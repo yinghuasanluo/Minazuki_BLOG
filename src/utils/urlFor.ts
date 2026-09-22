@@ -11,8 +11,8 @@ export const urlFor = (path: string): string => {
   }
   // if path starts with a slash, treat it as root-relative
   if (path.startsWith("/")) {
-    return `${BASE_URL}${path}`;
+    return BASE_URL === "/" ? path : `${BASE_URL}${path}`;
   }
   // otherwise, treat it as relative to the base URL
-  return `${BASE_URL}/${path}`;
+  return BASE_URL === "/" ? `/${path}` : `${BASE_URL}/${path}`;
 };

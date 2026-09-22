@@ -1,16 +1,16 @@
 export default {
   site: {
-    title: "My Blog",
-    subtitle: "My Blog Subtitle",
-    description: "D-Sketon's blog",
-    keywords: "D-Sketon, blog, astro, theme",
-    author: "D-Sketon",
+    title: "Minazuki Fubukiの幻想乡",
+    subtitle: "Minazuki Fubuki Blog",
+    description: "A blog about technology, life and everything in between.",
+    keywords: "Touhou, blog, technology, life",
+    author: "Minazuki Fubuki",
     language: "zh-CN",
   },
 
   sidebar: {
-    avatar: "/images/avatar.webp",
-    position: "right", // left or right
+    avatar: "/images/inter.png",
+    position: "left", // left or right
   },
 
   widgets: ["recent_posts", "category", "tag", "tagcloud"],
@@ -27,7 +27,7 @@ export default {
 
   // If you want to use the srcset attribute, please enable it
   banner_srcset: {
-    enable: true,
+    enable: false,
     srcset: [
       { src: "/images/banner-600w.webp", media: "(max-width: 479px)" },
       { src: "/images/banner-800w.webp", media: "(max-width: 799px)" },
@@ -36,8 +36,8 @@ export default {
   },
 
   footer: {
-    since: 2020, // 2020 - current year
-    powered: true,
+    since: 2025, // 2020 - current year
+    powered: false,
     count: true,
     busuanzi: true,
     icp: {
@@ -58,11 +58,11 @@ export default {
 
   social: {
     // email: mailto:xxx@gmail.com
-    github: "https://github.com/yourname",
-    google: "https://plus.google.com/yourname",
-    twitter: "https://twitter.com/yourname",
-    facebook: "https://www.facebook.com/yourname",
-    // instagram: https://www.instagram.com/yourname
+    github: "https://github.com/yinghuasanluo",
+    // google: "https://plus.google.com/yingyuchuixue",
+    // twitter: "https://twitter.com/yingyuchuixue",
+    // facebook: "https://www.facebook.com/yourname",
+    // instagram: "https:www.instagram.com/yingyuchuixue1",
     // linkedin: https://www.linkedin.com/in/yourname
     // pinterest: https://www.pinterest.com/yourname
     // youtube: https://www.youtube.com/channel/yourname
@@ -236,10 +236,11 @@ export default {
   },
   // show categories card on home page
   home_categories: {
-    enable: false,
+    enable: true,
     content: [
       {
-        categories: ""
+        categories: "Blog",
+        cover: "/images/category-blog.webp",
       },
     ]
   },
