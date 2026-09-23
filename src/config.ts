@@ -59,10 +59,10 @@ export default {
   social: {
     // email: mailto:xxx@gmail.com
     github: "https://github.com/yinghuasanluo",
-    // google: "https://plus.google.com/yingyuchuixue",
-    // twitter: "https://twitter.com/yingyuchuixue",
+    // google: "https://plus.google.com/yourname",
+    // twitter: "https://twitter.com/yourname",
     // facebook: "https://www.facebook.com/yourname",
-    // instagram: "https:www.instagram.com/yingyuchuixue1",
+    // instagram: "https://www.instagram.com/yourname",
     // linkedin: https://www.linkedin.com/in/yourname
     // pinterest: https://www.pinterest.com/yourname
     // youtube: https://www.youtube.com/channel/yourname
@@ -166,14 +166,7 @@ export default {
     count: true,
   },
 
-  friend: [
-    {
-      name: "D-Sketon",
-      url: "https://d-sketon.github.io/",
-      desc: "Main Site with hexo-theme-reimu",
-      avatar: "https://d-sketon.github.io/avatar/avatar.webp",
-    },
-  ],
+  friend: [],
 
   copyright: {
     enable: true,
@@ -247,7 +240,7 @@ export default {
   triangle_badge: {
     enable: false,
     type: "github",
-    link: "https://github.com/D-Sketon/astro-theme-reimu",
+    link: "https://github.com/yourname/your-repo",
   },
   // whether to display the notification when the article is outdated
   outdate: {

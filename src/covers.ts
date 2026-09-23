@@ -1,7 +1,1 @@
-export default [
-  "https://d-sketon.top/img/backwebp/bg1.webp",
-  "https://d-sketon.top/img/backwebp/bg4.webp",
-  "https://d-sketon.top/img/backwebp/bg7.webp",
-  "https://d-sketon.top/img/backwebp/bg8.webp",
-  "https://d-sketon.top/img/backwebp/bg10.webp",
-];
+export default [];
