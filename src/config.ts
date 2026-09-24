@@ -2,8 +2,8 @@ export default {
   site: {
     title: "Minazuki Fubukiの幻想乡",
     subtitle: "Minazuki Fubuki Blog",
-    description: "A blog about technology, life and everything in between.",
-    keywords: "Touhou, blog, technology, life",
+    description: "记录技术实践、学习笔记与日常想法的个人博客。",
+    keywords: "Touhou, Astro, 技术笔记, 个人博客",
     author: "Minazuki Fubuki",
     language: "zh-CN",
   },
@@ -27,7 +27,7 @@ export default {
 
   // If you want to use the srcset attribute, please enable it
   banner_srcset: {
-    enable: false,
+    enable: true,
     srcset: [
       { src: "/images/banner-600w.webp", media: "(max-width: 479px)" },
       { src: "/images/banner-800w.webp", media: "(max-width: 799px)" },
@@ -190,7 +190,7 @@ export default {
   // see https://github.com/D-Sketon/mouse-firework
   firework: {
     enable: true,
-    disable_on_mobile: false,
+    disable_on_mobile: true,
     options: {
       excludeElements: ["a", "button"],
       particles: [
@@ -229,13 +229,8 @@ export default {
   },
   // show categories card on home page
   home_categories: {
-    enable: true,
-    content: [
-      {
-        categories: "Blog",
-        cover: "/images/category-blog.webp",
-      },
-    ]
+    enable: false,
+    content: [],
   },
   triangle_badge: {
     enable: false,

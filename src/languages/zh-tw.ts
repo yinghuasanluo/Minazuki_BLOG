@@ -24,7 +24,7 @@ export default {
   home: "首頁",
   about: "關於",
   friend: "友鏈",
-  archives: "歸檔",
+  archives: "文章",
 
   sidebar: {
     post: "文章",

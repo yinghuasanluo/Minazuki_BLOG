@@ -1,0 +1,28 @@
+---
+import { BASE_URL } from "../utils/config";
+import Footer from "../components/Footer.astro";
+import HeaderTitle from "../components/partial/HeaderTitle.astro";
+import BaseLayout from "./BaseLayout.astro";
+
+type Props = {
+  title: string;
+};
+
+const { title } = Astro.props;
+---
+
+<BaseLayout title={title} showSidebar={false} toc={false}>
+  <HeaderTitle title={title} url={`${BASE_URL}/`} slot="header" />
+  <section id="main" class="blank-page" aria-label={title}>
+    <slot />
+  </section>
+  <Footer slot="footer" />
+</BaseLayout>
+
+<style>
+  .blank-page {
+    min-height: 30vh;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+</style>

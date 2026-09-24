@@ -63,7 +63,12 @@
       if (isMobileNavAnim) return;
       isMobileNavAnim = true;
       document.body.classList.toggle("mobile-nav-on");
-      mask?.classList.remove("hide");
+      const isOpen = document.body.classList.contains("mobile-nav-on");
+      mainNavToggle?.setAttribute(
+        "aria-expanded",
+        String(isOpen)
+      );
+      mask?.classList.toggle("hide", !isOpen);
       setTimeout(() => {
         isMobileNavAnim = false;
       }, 300);
@@ -73,6 +78,7 @@
       if (isMobileNavAnim || !document.body.classList.contains("mobile-nav-on"))
         return;
       document.body.classList.remove("mobile-nav-on");
+      mainNavToggle?.setAttribute("aria-expanded", "false");
       mask?.classList.add("hide");
     };
 
@@ -94,6 +100,7 @@
       if (isMobileNavAnim || !document.body.classList.contains("mobile-nav-on"))
         return;
       document.body.classList.remove("mobile-nav-on");
+      mainNavToggle?.setAttribute("aria-expanded", "false");
       mask?.classList.add("hide");
     };
 
@@ -109,6 +116,7 @@
         return;
       setTimeout(() => {
         document.body.classList.remove("mobile-nav-on");
+        mainNavToggle?.setAttribute("aria-expanded", "false");
         mask?.classList.add("hide");
       }, 200);
     };

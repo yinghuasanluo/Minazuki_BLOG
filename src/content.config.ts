@@ -24,6 +24,8 @@ const blog = defineCollection({
     sponsor: z.boolean().optional(),
     copyright: z.boolean().optional(),
     share: z.boolean().optional(),
+    featured: z.boolean().optional(),
+    featuredOrder: z.number().int().optional(),
   }),
 });
 

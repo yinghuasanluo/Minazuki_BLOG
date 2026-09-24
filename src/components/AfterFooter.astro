@@ -74,6 +74,9 @@ const copyright = String.raw`
         const config = window.__FIREWORK_CONFIG__;
         
         if (config && config.enable) {
+          if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            return;
+          }
           if (config.disable_on_mobile && ('ontouchstart' in window || navigator.maxTouchPoints > 0)) {
             return;
           }

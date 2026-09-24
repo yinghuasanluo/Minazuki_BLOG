@@ -24,7 +24,7 @@ export default {
   home: "Home",
   about: "About",
   friend: "Friend",
-  archives: "Archives",
+  archives: "Articles",
 
   sidebar: {
     post: "Posts",

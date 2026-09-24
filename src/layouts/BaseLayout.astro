@@ -15,6 +15,7 @@ import Loader from "../components/partial/Loader.astro";
 import Sidebar from "../components/Sidebar.astro";
 import MobileNav from "../components/MobileNav.astro";
 import SidebarScript from "../components/sidebar/SidebarScript.astro";
+import { urlFor } from "../utils/urlFor";
 
 type Props = {
   title?: string;
@@ -28,6 +29,7 @@ type Props = {
     text: string;
   }>;
   toc?: boolean;
+  showSidebar?: boolean;
 };
 
 const {
@@ -38,6 +40,7 @@ const {
   isPost = false,
   headings = [],
   toc = true,
+  showSidebar = true,
 } = Astro.props;
 ---
 
@@ -45,7 +48,13 @@ const {
 <html lang={SITE.language}>
   <head>
     <ThemeScript />
-    <CommonMeta title={title} description={description} keywords={keywords} />
+    <CommonMeta
+      title={title}
+      description={description}
+      keywords={keywords}
+      image={cover ? urlFor(cover) : undefined}
+      isPost={isPost}
+    />
     <style>
       main {
         position: relative;
@@ -67,20 +76,22 @@ const {
     </Header>
 
     <main
-      class={SIDEBAR.position === "left"
+      class={!showSidebar
+        ? ""
+        : SIDEBAR.position === "left"
         ? "sidebar-left"
         : SIDEBAR.position === "right"
           ? "sidebar-right"
           : ""}
     >
       {
-        SIDEBAR.position === "left" && (
+        showSidebar && SIDEBAR.position === "left" && (
           <Sidebar isPost={isPost} headings={headings} toc={toc} />
         )
       }
       <slot />
       {
-        SIDEBAR.position === "right" && (
+        showSidebar && SIDEBAR.position === "right" && (
           <Sidebar isPost={isPost} headings={headings} toc={toc} />
         )
       }

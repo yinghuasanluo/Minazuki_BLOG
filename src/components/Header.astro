@@ -38,14 +38,16 @@ const sortedPosts = posts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDa
         </HeaderLink>
       ))
     }
-    <span
+    <button
       id="main-nav-toggle"
       class="nav-icon"
-      aria-label="Toggle navigation"
-      role="button"
+      type="button"
+      aria-label="打开导航"
+      aria-controls="mobile-nav"
+      aria-expanded="false"
     >
       <Icon name="fa6-solid:bars" size={14} />
-    </span>
+    </button>
   </nav>
   <nav id="sub-nav" aria-label="Secondary navigation">
     <RssBtn client:load url={BASE_URL} className="nav-icon" />
@@ -173,6 +175,8 @@ const sortedPosts = posts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDa
 
   #main-nav-toggle {
     display: none;
+    border: 0;
+    background: transparent;
 
     @media screen and (max-width: 767px) {
       display: block;
